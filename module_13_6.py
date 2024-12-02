@@ -5,7 +5,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-api = "7877642793:AAH_MtD_MUgjVUEuLQU61TgVFKYWv2xnEB8"
+api = "_"
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
