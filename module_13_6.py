@@ -14,11 +14,11 @@ button = KeyboardButton(text='Рассчитать')
 button2 = KeyboardButton(text='Информация')
 kb.add(button)
 kb.add(button2)
-formula = InlineKeyboardMarkup()
+formula_kb = InlineKeyboardMarkup()
 button_f_1 = InlineKeyboardButton(text='Рассчитать норму калорий', callback_data='calories')
 button_f_2 = InlineKeyboardButton(text='Формулы расчёта', callback_data='formulas')
-formula.add(button_f_1)
-formula.add(button_f_2)
+formula_kb.add(button_f_1)
+formula_kb.add(button_f_2)
 
 
 class UserState(StatesGroup):
@@ -34,7 +34,7 @@ async def start(message):
 
 @dp.message_handler(text=['Рассчитать'])
 async def main_menu(message):
-    await message.answer('Выберите опцию:', reply_markup=formula)
+    await message.answer('Выберите опцию:', reply_markup=formula_kb)
 
 
 @dp.callback_query_handler(text='formulas')
